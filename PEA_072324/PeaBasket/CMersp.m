@@ -1,0 +1,50 @@
+function wavelet_conv_data2 = CMersp(selectCHANdata,srate)
+
+%selectCHANdata = selectCHANdata22; srate = 5000;
+frequencies = 125:130;
+% frequencies = 100:130;
+cycles = 7;
+time = -1:1/srate:1;
+
+% go through frequencies
+for ifr = 1:length(frequencies)
+    
+    % freqs and cycles
+    f = frequencies(ifr);
+    s = cycles/(2*pi*f);
+    % sine and gaussian
+    sine_wave = exp(1i*2*pi*f.*time);
+    gaussian_win = exp(-time.^2./(2*s^2));
+    % normalization factor
+    normalization_factor = 1 / (s * sqrt(2* pi));
+    % make wavelet
+    wavelet = normalization_factor .* sine_wave .* gaussian_win;
+    halfwaveletsize = ceil(length(wavelet)/2); % half of the wavelet size
+    
+    % convolve with data
+    n_conv = length(wavelet) + length(selectCHANdata) - 1; % compute Gaussian
+    % fft
+    fft_w = fft(wavelet,n_conv);
+    fft_e = fft(selectCHANdata,n_conv);
+    ift   = ifft(fft_e.*fft_w,n_conv);
+    wavelet_conv_data(ifr,:) = abs(ift(halfwaveletsize:end-halfwaveletsize+1)).^2;
+    
+end
+
+% Baseline correction using decibel method
+% size(wavelet_conv_data)
+% if size(wavelet_conv_data,1)>1
+
+%figure; plot(mean(wavelet_conv_data(:,1000:2000)))
+bl = repmat(nanmean(wavelet_conv_data(:,1000:2000),2),1,size(wavelet_conv_data,2));
+% bl = repmat(nanmedian(wavelet_conv_data,2),1,size(wavelet_conv_data,2));
+
+
+% elseif size(wavelet_conv_data,1)==1
+%     bl = repmat(nanmean(wavelet_conv_data(1000:2000)),1,size(wavelet_conv_data,2));
+% end
+wavelet_conv_data2 = 10*log( wavelet_conv_data./ bl);
+
+% figure; imagesc(wavelet_conv_data2); colorbar; colormap jet
+
+end
