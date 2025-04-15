@@ -30,6 +30,10 @@ Demo data is available at the following OSF repository:
 
 https://osf.io/9u6v4/
 
+
+Please direct any questions to: cheol-soh@uiowa.edu
+
+
 Citation: 
 
 Soh, C., Hervault, M., Rohl, A. H., Greenlee, J. D. W., & Wessel, J. R. (2025). Precisely-timed outpatient recordings of subcortical local field potentials from wireless streaming-capable deep-brain stimulators: a method and toolbox. Journal of Neuroscience Methods, 418, 110448. https://doi.org/https://doi.org/10.1016/j.jneumeth.2025.110448
