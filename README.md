@@ -1,7 +1,17 @@
-PEA toolbox was developed to easily integrate LFP recorded from sensing-capable DBS (e.g., Percept  PC, Medtronic) and other simultaneously recorded electrophysiological data.
+**PEA (Percept-EEG-Alignment) toolbox**
 
 Requirements: Matlab and eeglab (https://sccn.ucsd.edu/eeglab/)
 Input files: EEG file in eeglab format (*.set) and BrainSense file (*.json) exported from the Clinician tablet. 
+
+The PEA toolbox is a GUI-based tool that allows precise alignment of LFP data recorded using a sensing-capable DBS (e.g., Percept  PC, Medtronic) and concurrently recorded electrophysiological data, including scalp EEG.
+This tool will automatically identify and present windows near a signal triggered by switching on the DBS (switch-on signal) the user then simply needs to point and click on the peak of the switch-on signal. Repeat this procedure in both EEG and LFP recordings. The PEA toolbox will then align both recordings based on the switch-on signal. When merging LFP with EEG data, event markers that are typically a part of the EEG dataset will be automatically transferred to the LFP data, allowing any type of event-related analyses with it.   
+
+**The Switch-on Signal**
+
+![Screen Shot 2025-04-15 at 16 56 54 PM](https://github.com/user-attachments/assets/b2096a18-12e5-4835-bd0d-5ce86b282271)
+
+The switch-on signal is defined as a transient spike triggered by the activation of DBS that is prior to the high-amplitude pulse stimulation artifact that persists until the DBS is deactivated. In scalp EEG data, it is typically found from frontocentral electrodes (e.g., Cz, FCz; default). 
+
 
 How to align? (See the paper below for detailed descriptions of a switch-on-related spike)
 Step 1. Click _**Set Parameters**_ button and select all input files. 
@@ -14,7 +24,7 @@ Demo data is available at the following OSF repository:
 https://osf.io/9u6v4/
 
 Citation: 
-Soh, C., Hervault, M., Rohl, A. H., Greenlee, J. D. W., & Wessel, J. R. (2025). Precisely-timed outpatient recordings of subcortical local field potentials from wireless streaming-capable deep-brain stimulators: a method and toolbox. Journal of Neuroscience Methods, 418, 110448. https://doi.org/https://doi.org/10.1016/j.jneumeth.2025.110448 ![image](https://github.com/user-attachments/assets/829dfd40-d9ef-4d5a-86f1-c276ad22d360)
+Soh, C., Hervault, M., Rohl, A. H., Greenlee, J. D. W., & Wessel, J. R. (2025). Precisely-timed outpatient recordings of subcortical local field potentials from wireless streaming-capable deep-brain stimulators: a method and toolbox. Journal of Neuroscience Methods, 418, 110448. https://doi.org/https://doi.org/10.1016/j.jneumeth.2025.110448
 
 
 
