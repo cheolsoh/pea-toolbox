@@ -1,6 +1,7 @@
 **PEA (Percept-EEG-Alignment) toolbox**
 
 Requirements: Matlab and eeglab (https://sccn.ucsd.edu/eeglab/)
+
 Input files: EEG file in eeglab format (*.set) and BrainSense file (*.json) exported from the Clinician tablet. 
 
 The PEA toolbox is a GUI-based tool that allows precise alignment of LFP data recorded using a sensing-capable DBS (e.g., Percept  PC, Medtronic) and concurrently recorded electrophysiological data, including scalp EEG.
