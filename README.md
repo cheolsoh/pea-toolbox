@@ -7,7 +7,7 @@ Input files: EEG file in eeglab format (*.set) and BrainSense file (*.json) expo
 The PEA toolbox is a GUI-based tool that allows precise alignment of LFP data recorded using a sensing-capable DBS (e.g., Percept  PC, Medtronic) and concurrently recorded electrophysiological data, including scalp EEG.
 This tool will automatically identify and present windows near a signal triggered by switching on the DBS (switch-on signal) the user then simply needs to point and click on the peak of the switch-on signal. Repeat this procedure in both EEG and LFP recordings. The PEA toolbox will then align both recordings based on the switch-on signal. When merging LFP with EEG data, event markers that are typically a part of the EEG dataset will be automatically transferred to the LFP data, allowing any type of event-related analyses with it.   
 
-**The Switch-on Signal**
+**The Switch-on Signal** (EEG signal: black line; LFP signal: magenta line)
 
 ![Screen Shot 2025-04-15 at 16 56 54 PM](https://github.com/user-attachments/assets/b2096a18-12e5-4835-bd0d-5ce86b282271)
 
