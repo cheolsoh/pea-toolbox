@@ -26,9 +26,7 @@ Step 4. Click _**Merge Data**_ to merge the EEG and LFP data.
 
 
 
-Demo data is available at the following OSF repository:
-
-https://osf.io/9u6v4/
+Demo data is available here: https://osf.io/9u6v4/
 
 
 Please direct any questions to: cheol-soh@uiowa.edu
