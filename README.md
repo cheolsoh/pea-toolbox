@@ -1,4 +1,4 @@
-# **Powercycling method is NOT available following the necessary update to make adaptive DBS available for use**
+# **Powercycling method is NOT available following the necessary update for adaptive DBS (May/2025)**
 
 After the update was pushed to the clinician tablet in May, 2025, toggling between DBS ON/OFF introduces a 7-second pause in recording. As Soh et al. (2025) was based on the DBS ON artifact that is included in that time window, this method cannot be used with the up-to-date clinician tablet. It might be doable with the old tablet that hasn't been updated, which we haven't had a chance to test. However, we developed an alternative method that is as precise as the DBS ON/OFF method. If you are interested in aligning EEG/LFP data, please reach out to Cheol Soh (cheol-soh@uiowa.edu).
 
